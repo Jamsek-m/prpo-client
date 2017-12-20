@@ -1,0 +1,27 @@
+<div *ngIf="opomnik">
+	
+		<h3>Podrobnosti opomnika {{opomnik.naslov}}</h3>
+	
+		<table>
+			<tr>
+				<td>Id:</td>
+				<td>{{opomnik.id}}</td>
+			</tr>
+			<tr>
+				<td>Naslov:</td>
+				<td>{{opomnik.naslov}}</td>
+			</tr>
+			<tr>
+				<td>Opis:</td>
+				<td>{{opomnik.opis}}</td>
+			</tr>
+			<tr>
+				<td>Lastnik:</td>
+				<td>{{opomnik.uporabnik.ime}} {{opomnik.uporabnik.priimek}}</td>
+			</tr>
+		</table>
+
+		<br>
+		<button (click)="nazaj()">Nazaj</button>
+	</div>
+	

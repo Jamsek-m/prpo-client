@@ -1,0 +1,14 @@
+<h2>Opomniki</h2>
+
+<ul class="opomniki">
+    <li *ngFor="let opomnik of opomniki" (click)="naPodrobnosti(opomnik)">
+        <span>{{opomnik.naslov}}! 
+            <span *ngIf="opomnik.uporabnik">za: {{opomnik.uporabnik.ime}} {{opomnik.uporabnik.priimek}}</span>
+        </span>
+        <button class="edit" (click)="edit(opomnik); $event.stopPropagation()">Edit</button>
+        <button class="delete"
+                (click)="delete(opomnik); $event.stopPropagation()">x
+        </button>
+    </li>
+    <button (click)="dodajOpomnik()">Dodaj opomnik</button>
+</ul>
